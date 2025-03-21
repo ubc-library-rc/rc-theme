@@ -1,1 +1,77 @@
-// custom SCSS (or CSS) goes here
+.step {
+  padding:20px;
+  background-color:#F5F6FA;
+  border-radius:5px;
+}
+
+.circle,
+.circle-blue {
+  display:inline-block;
+  line-height: 28px;
+  width: 28px;
+  height: 28px;
+  border-radius:50%;
+  
+  text-align: center;
+  background-color: #2D84FA;
+  color: white;
+
+  @include fs-2;
+}
+
+.circle-green {
+  background-color: $green-200;
+}
+
+.circle-purple {
+  background-color: $purple-100;
+}
+
+.circle-red {
+  background-color: $red-200;
+}
+
+.circle-yellow {
+  color: $grey-dk-200;
+  background-color: $yellow-200;
+}
+
+.label-step {
+  background-color: #2D84FA;
+  color: white;
+}
+
+$callouts: (
+    note: ($blue-300, rgba($blue-000, .1), 'Note'),
+    warn: ($yellow-300, rgba($yellow-000, .2), 'Warning'),
+    prereq: ($green-300, rgba($green-000, .1), 'Prerequisites')
+);
+
+@each $class, $props in $callouts {
+    .#{$class} {
+        background: nth($props, 2);
+        border-left: $border-radius solid nth($props, 1);
+        border-radius: $border-radius;
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 3px 10px rgba(0, 0, 0, 0.08);
+        padding: .8rem;
+        font-size: 1em;
+        margin: 30px 20px 40px 20px;
+
+        &::before {
+            color: nth($props, 1);
+            content: nth($props, 3);
+            display: block;
+            font-weight: bold;
+            font-size: 1em;
+            padding-bottom: .125rem;
+        }
+    }
+}
+
+.label {
+    font-size: 9px;
+    padding-bottom: 0.05em;
+    padding-top: 0.05em;
+    margin-bottom: 0;
+    margin-left: 0;
+}
