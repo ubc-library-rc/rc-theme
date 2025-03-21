@@ -1,3 +1,26 @@
+# RC README notes
+## UBC RC cutomizations 2025-03-21
+- ` _sass/color_schemes/rc.scss`. File added, change default link color to blue.
+//2025-03-21 moved pre fork-sync file over to folder//
+
+- ` _includes/footer_rc.html` File added, sets copyright info in left side panel.
+//2025-03-21 moved pre fork-sync file over to folder//
+
+- ` assets/images/rc-logo.png`. File added, Research Commons logo.
+// 2025-03-21 moved 3 files "just-the-docs.png", "rc-logo.png", and "search.svg" to images folder since none of the three were present.//
+
+- ` _sass/custom/custom.scss` Modified, contains all RC-related css changes. Upstream file is blank so this should be preserved when pulling.
+//2025-03-21 filled in custom.scss with pre-sync content. This file was blank previously//
+
+- For footer, edited multiple files to point to the `footer_rc.html`  file instead of the default file to cutomize the footer
+
+## UBC RC future customizations
+Syncing this fork with the most up to date just the docs will delete all RC specific changes. This means that all customizations and commit history of the changes made here will be lost. 
+
+Note, files and where files had to be changed between the old and up to date just the docs, so this will likely be the case with the next sync as well.
+
+
+# just the docs original README content
 <p align="right">
     <a href="https://badge.fury.io/rb/just-the-docs"><img src="https://badge.fury.io/rb/just-the-docs.svg" alt="Gem version"></a> <a href="https://github.com/just-the-docs/just-the-docs/actions/workflows/ci.yml"><img src="https://github.com/just-the-docs/just-the-docs/actions/workflows/ci.yml/badge.svg" alt="CI Build status"></a> <a href="https://app.netlify.com/sites/just-the-docs/deploys"><img src="https://api.netlify.com/api/v1/badges/9dc0386d-c2a4-4077-ad83-f02c33a6c0ca/deploy-status" alt="Netlify Status"></a>
 </p>
