@@ -28,7 +28,7 @@
         document.getElementById("last-updated").textContent = `Site last updated ${formattedDate}`;
       } catch (error) {
         console.error('Failed to fetch last commit date:', error);
-        document.getElementById("last-updated").textContent = `Last updated date unavailable`;
+        document.getElementById("last-updated").textContent = ``;
       }
     }
 
