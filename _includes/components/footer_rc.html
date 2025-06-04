@@ -7,7 +7,7 @@
               {% endif %}
 
 
-<p id="last-updated">Loading last updated date...</p>
+<p class="text-small" id="last-updated">Loading last updated date...</p>
 
 
 <script>
@@ -25,7 +25,7 @@
         const date = new Date(isoDate);
         const options = { year: 'numeric', month: 'short', day: 'numeric' };
         const formattedDate = date.toLocaleDateString(undefined, options);
-        document.getElementById("last-updated").textContent = `Last updated ${formattedDate}`;
+        document.getElementById("last-updated").textContent = `Site last updated ${formattedDate}`;
       } catch (error) {
         console.error('Failed to fetch last commit date:', error);
         document.getElementById("last-updated").textContent = `Last updated date unavailable`;
