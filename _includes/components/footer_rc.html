@@ -7,9 +7,14 @@
               {% endif %}
 
 
-  <p id="last-updated">Loading last updated date...</p>
+<p id="last-updated">Loading last updated date...</p>
 
-  <script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const repoOwner = "{{ site.github.owner_name }}";
+    const repoName = "{{ site.github.repository_name }}";
+
     async function showLastUpdated(owner, repo) {
       const url = `https://api.github.com/repos/${owner}/${repo}/commits?per_page=1`;
       try {
@@ -27,9 +32,6 @@
       }
     }
 
-    // GitHub Pages provides these variables automatically
-    const repoOwner = "{{ site.github.owner_name }}";
-    const repoName = "{{ site.github.repository_name }}";
-
     showLastUpdated(repoOwner, repoName);
-  </script>
+  });
+</script>
