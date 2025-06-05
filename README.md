@@ -6,7 +6,7 @@ The last sync with the JTD repository was on 2025-03-21.
 ## UBC Research Commons customizations
 
 - `_sass/color_schemes/rc.scss` file added, changes default link color to blue. This custom color scheme is referenced by the `color_scheme: rc` line in a workshop repository's `_config.yml` file.
-- `_includes/components/footer_rc.html` file added, produces custom "View in Github" link and "Site last updated" in page footer ("Site last updated" only appears when site is rendered by GitHub pages, not locally with Jekyll). Referenced in `_layouts/default.html`.
+- `_includes/components/footer_rc.html` file added, produces custom "View in Github" link and "Repository last updated" in page footer ("Repository last updated" only appears when site is rendered by GitHub pages, not locally with Jekyll). Referenced in `_layouts/default.html`.
 - `_includes/nav_footer_custom.html` file modified, produces license block and logo at bottom of left-hand navigation pane. Content included automatically.
 - `assets/images/rc-logo.png` file added, generic UBC Library logo. Referenced by `_includes/nav_footer_custom.html`
 - `_sass/custom/custom.scss` file modified, contains RC-related css changes. Content included automatically.
