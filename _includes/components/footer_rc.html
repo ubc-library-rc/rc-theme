@@ -1,15 +1,13 @@
 <hr>
-<footer>
-	{% if site.github_repo_url != nil %}
-	<p class="text-small text-grey-dk-000 mb-0"><a href="{{ site.github_repo_url }}" target="_blank">View in GitHub</a></p>
-	{% endif %}
-	{% if site.github_repo_url == nil and site.footer_content != nil %}
-	<p class="text-small text-grey-dk-000 mb-0">{{ site.footer_content }}</p>
-	{% endif %}
-	
-	
-	<p class="text-small" id="last-updated">Loading last updated date...</p>
-</footer>
+{% if site.github_repo_url != nil %}
+<p class="text-small text-grey-dk-000 mb-0"><a href="{{ site.github_repo_url }}" target="_blank">View in GitHub</a></p>
+{% endif %}
+{% if site.github_repo_url == nil and site.footer_content != nil %}
+<p class="text-small text-grey-dk-000 mb-0">{{ site.footer_content }}</p>
+{% endif %}
+
+
+<p class="text-small" id="last-updated">Loading last updated date...</p>
 
 <script>
 	document.addEventListener('DOMContentLoaded', function () {
