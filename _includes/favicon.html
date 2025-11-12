@@ -13,13 +13,5 @@
   total build time from 26.074s to 21.656s -- a saving of about 17%.
 {%- endcomment -%}
 
-{% for file in site.static_files %}
-  {% if file.path == site.favicon_ico or file.path == '/favicon.ico' %}
-    {% assign favicon = true %}
-  {% endif %}
-{% endfor %}
 
-{% if favicon %}
-  <link rel=" shortcut icon" href="{{ site.favicon_ico | default: '/favicon.ico' | relative_url }}" >
-	<p>Favicon found</p>
-{% endif %}
+<link rel="shortcut icon" href="{{ site.favicon_ico | default: '/favicon.ico' | relative_url }}" >
