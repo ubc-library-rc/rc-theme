@@ -595,6 +595,12 @@ jtd.onReady(function(){
     copyButton.addEventListener('click', function () {
       if(timeout === null) {
         var code = (codeBlock.querySelector('pre:not(.lineno, .highlight)') || codeBlock.querySelector('code')).innerText;
+        //omit $ and > from the beginning of shell input
+	    if (codeBlock.classList.contains('shell-input')) {
+            code = code.replace(/^\s*\$\s?/gm, '');
+            code = code.replace(/^\s*>\s?/gm, '');
+        }
+        //
         window.navigator.clipboard.writeText(code);
 
         copyButton.innerHTML = svgCopied;
